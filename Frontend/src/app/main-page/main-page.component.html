@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="main">
+        <div class="left">
+            <div class="heading">
+                <h1>Item</h1>
+            </div>
+           <div class="body" *ngFor= "let catlist of catlists" >
+               <ul>
+                   <li><a routerLink= "#"  [routerLink]="['/catlist',catlist._id]">{{catlist.title}}</a> </li>
+                   
+                 </ul>
+                
+               </div> 
+            
+            <div class = "btn">
+                <button   routerLink="/new-cat">+New Item</button>
+            </div>
+            
+        </div>
+        <div class="newright" >
+            <button routerLink="/update-cat">Edit</button>
+            <button>Delete</button>
+         </div>
+        
+    </div>
+</div>
